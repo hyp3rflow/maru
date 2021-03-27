@@ -1,0 +1,9 @@
+{
+  "name": "@hyp3rflow/maru",
+  "version": "0.0.1",
+  "description": "Design system, maru.",
+  "main": "index.js",
+  "repository": "https://github.com/hyp3rflow/maru.git",
+  "author": "hyperflow <hyperflow@kakao.com>",
+  "license": "MIT"
+}
