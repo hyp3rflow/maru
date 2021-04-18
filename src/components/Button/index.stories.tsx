@@ -4,7 +4,7 @@ import React from 'react';
 import Column from '@src/components/Layout/Column';
 import Row from '@src/components/Layout/Row';
 
-import Button, { ButtonVariant } from '.';
+import Button, { ButtonProps, ButtonVariant } from '.';
 
 export const Gallery: Story = () => {
   const fontWeights: React.CSSProperties['fontWeight'][] = ['normal', 'bold'];
@@ -41,6 +41,16 @@ export const Gallery: Story = () => {
       ))}
     </>
   );
+};
+
+export const Template: Story<ButtonProps> = args => {
+  return <Button {...args}>{args.children}</Button>;
+};
+
+Template.args = {
+  variant: 'primary',
+  fontWeight: 'bold',
+  children: 'Lorem Ipsum',
 };
 
 export default {
