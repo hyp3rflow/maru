@@ -12,6 +12,7 @@ export default createGlobalStyle`
   *,
   *::before,
   *::after {
+    margin: 0;
     box-sizing: inherit;
     outline: none;
   }
