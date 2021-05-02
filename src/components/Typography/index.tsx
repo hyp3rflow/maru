@@ -31,7 +31,7 @@ const Typography = React.forwardRef<HTMLElement, TypographyProps>(
     const Element = typographyElementMap[element];
 
     const TypographyWrapper = styled(Element)<TypographyWrapperProps>`
-      color: ${styleProps => styleProps.color ?? oc.gray[9]};
+      color: ${styleProps => styleProps.color};
       font-weight: ${styleProps => styleProps.fontWeight};
       font-size: ${styleProps => styleProps.fontSize};
     `;
