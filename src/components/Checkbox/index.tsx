@@ -49,13 +49,13 @@ const HiddenCheckbox = styled.input.attrs({
   type: 'checkbox',
 })`
   border: 0;
-  height: 0px;
-  margin: 0px;
+  height: 1px;
+  margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   white-space: nowrap;
-  width: 0px;
+  width: 1px;
 `;
 
 const BoxIcon = styled.svg`
