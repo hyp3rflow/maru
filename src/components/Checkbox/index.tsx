@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
 
-type CheckboxVariant = 'red' | 'green' | 'blue';
+export type CheckboxVariant = 'red' | 'green' | 'blue';
 
 interface CheckboxVariantStyle {
   boxColor: React.CSSProperties['backgroundColor'];
