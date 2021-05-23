@@ -6,7 +6,12 @@ import Radio, { RadioProps } from '.';
 export const Gallery: Story = () => {
   return (
     <>
-      <Radio>안녕</Radio>
+      <Radio>Lorem Ipsum</Radio>
+      <Radio defaultChecked>Lorem Ipsum</Radio>
+      <Radio>Lorem Ipsum</Radio>
+      <Radio>Lorem Ipsum</Radio>
+      <Radio>Lorem Ipsum</Radio>
+      <Radio>Lorem Ipsum</Radio>
     </>
   );
 };
