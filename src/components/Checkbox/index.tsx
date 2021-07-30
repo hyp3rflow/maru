@@ -40,8 +40,6 @@ export interface CheckboxProps extends React.ComponentPropsWithoutRef<'input'> {
 }
 
 const CheckboxContainer = styled.div`
-  vertical-align: text-top;
-  align-content: center;
   color: ${props => props.color};
 `;
 
@@ -66,23 +64,21 @@ const BoxIcon = styled.svg`
 `;
 
 const StyledCheckbox = styled.div<StyledCheckboxProps>`
-  display: inline-block;
+  display: inline-flex;
   width: 16px;
   height: 16px;
+  margin-bottom: 1.4px;
   margin-right: 5px;
   background: ${props =>
     props.isChecked ? props.boxStyle.boxColor : oc.gray[2]};
   border-radius: 3px;
   transition: all 150ms;
-
   ${BoxIcon} {
     visibility: ${props => (props.isChecked ? 'visible' : 'hidden')};
   }
-
   ${HiddenCheckbox}:focus + & {
     box-shadow: 0 0 0 3px ${props => props.boxStyle.focusColor};
   }
-
   ${HiddenCheckbox}:disabled+& {
     opacity: 0.25;
     filter: blur(0.2px);
@@ -94,6 +90,11 @@ const StyledCheckbox = styled.div<StyledCheckboxProps>`
   }
 `;
 
+const CheckboxLabel = styled.label`
+  display: flex;
+  align-items: center;
+  vertical-align: text-bottom;
+`;
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (props, ref) => {
     const {
@@ -114,7 +115,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     return (
       <>
         <CheckboxContainer {...props}>
-          <label>
+          <CheckboxLabel>
             <HiddenCheckbox
               checked={isChecked}
               disabled={isDisabled}
@@ -131,7 +132,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
               </BoxIcon>
             </StyledCheckbox>
             {children}
-          </label>
+          </CheckboxLabel>
         </CheckboxContainer>
       </>
     );
