@@ -1,0 +1,4 @@
+{
+  "extends": "./babel.config.json",
+  "ignore": ["**/*.stories.tsx", "**/*.spec.ts", "**/*.spec.tsx"]
+}
