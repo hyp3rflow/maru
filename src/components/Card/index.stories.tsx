@@ -4,7 +4,7 @@ import React from 'react';
 import Card, { CardProps } from '.';
 
 export const Gallery: Story = () => {
-  return <Card>Lorem Ipsum</Card>;
+  return <Card title="Lorem Ipsum">Lorem Ipsum</Card>;
 };
 
 export const Template: Story<CardProps> = args => {
